@@ -1,0 +1,48 @@
+<p>Let's take a look!</p>
+  <label for="name">Investing Amount: </label>
+  <input id="amount" type="text" />
+  <br /><br />
+  <label for="name">Months: </label>
+  <input id="months" type="text" />
+  <br /><br />
+  <button id="submit">Calculate</button>
+  <button id="clear">Clear</button>
+
+  <p>Invested Amount is <span id="outputName">____</span>. The city in which you live is <span id="outputCity">____</span>. </p>
+
+    <script>
+    var submit = document.getElementById("submit");
+    var capitalize = document.getElementById("capitalize");
+    var clear = document.getElementById("clear");
+
+    submit.onclick = function(){
+    	var amount = document.getElementById("amount").value;
+      var months = document.getElementById("months").value;
+
+      document.getElementById("outputName").innerText = amount;
+      document.getElementById("outputCity").innerText = months;
+
+      var pa = parseInt(amount);
+      var month = months;
+      var transaction = 4;
+      var transaction_count = 0;
+      document.write('Total Invested Amount : ' + pa +'<br/><br/><br/>');
+        for (var i = 1; i <= months; i++) {
+
+          document.write('<strong>'+ i + ' Month<br/>' + '----------------------------------------------------</strong>' + '<br/>');
+          for (var j = 0; j < transaction; j++) {
+            var single_roi = pa/100*5;
+            var total_amt =  single_roi + pa;
+            document.write("Week " + transaction_count + "-->  " + total_amt.toFixed(2) +" (" + single_roi.toFixed(2) + ')<br/>');
+            transaction_count++;
+            pa = total_amt;
+          }
+          document.write('---------------------------------------------------- <br/>');
+        }
+    }
+
+    clear.onclick = function(){
+    	document.getElementById("amount").value = "";
+      document.getElementById("months").value = "";
+    }
+  </script>
