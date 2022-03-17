@@ -128,7 +128,9 @@
     </script>
   </head>
 
-  <body class="gradient">
+  <body class="gradient {{ template.name }}">
+    {%- if template.name != 'ic' -%}
+
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -144,6 +146,7 @@
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
+    {%- endif -%}
 
     <script>
       window.shopUrl = '{{ shop.url }}';
