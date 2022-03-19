@@ -41,7 +41,7 @@
       var transaction_count = 0;
       document.write('Total Invested Amount : ' + pa +'<br/><br/><br/>');
         for (var i = 1; i <= months; i++) {
-          document.write('<div class="accordion" id="accordionExample"><div class="accordion-item"><h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">' + i + 'Months </strong></button></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"><div class="accordion-body"><strong>This is the</div></div></div></div>');
+          document.write('<div class="accordion" id="accordionExample"><div class="accordion-item"><h2 class="accordion-header" id="headingOne"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">' + i + 'Months </strong></button></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"><div class="accordion-body"><strong>This is the</div></div></div></div>');
           document.write('<strong>'+ i + ' Month<br/>' + '----------------------------------------------------</strong>' + '<br/>');
           for (var j = 0; j < transaction; j++) {
             var single_roi = pa/100*interest;
