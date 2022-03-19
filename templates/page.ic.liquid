@@ -37,12 +37,12 @@
       document.getElementById("outputamount").innerText = amount;
       document.getElementById("outputmonth").innerText = months;
       document.getElementById("outputroi").innerText = roi;
-      document.getElementById("outputtransaction_month").innerText = transactions_month;
+      // document.getElementById("outputtransaction_month").innerText = transactions_month;
 
       var pa = parseInt(amount);
       var month = months;
       var interest = parseInt(roi);
-      var transaction = transactions_month;
+      var transaction = parseInt(transactions_month);
       var transaction_count = 0;
       document.write('Total Invested Amount : ' + pa +'<br/><br/><br/>');
         for (var i = 1; i <= months; i++) {
