@@ -43,10 +43,10 @@
       var interest = parseInt(roi);
       var transaction = 4;
       var transaction_count = 0;
-      document.write('Total Invested Amount : ' + pa +'<br/><br/><br/>');
+      // document.write('Total Invested Amount : ' + pa +'<br/><br/><br/>');
         for (var i = 1; i <= months; i++) {
 
-          document.write('<strong>'+ i + ' Month<br/>' + '----------------------------------------------------</strong>' + '<br/>');
+          // document.write('<strong>'+ i + ' Month<br/>' + '----------------------------------------------------</strong>' + '<br/>');
           for (var j = 0; j < transaction; j++) {
             var single_roi = pa/100*interest;
             var total_amt =  single_roi + pa;
@@ -55,7 +55,7 @@
             transaction_count++;
             pa = total_amt;
           }
-          document.write('---------------------------------------------------- <br/>');
+          // document.write('---------------------------------------------------- <br/>');
         }
     }
 
