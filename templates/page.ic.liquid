@@ -50,11 +50,18 @@
           for (var j = 0; j < transaction; j++) {
             var single_roi = pa/100*interest;
             var total_amt =  single_roi + pa;
-            var node = document.write("Week " + transaction_count + "-->  " + total_amt.toFixed(2) +" (" + single_roi.toFixed(2) + ')<br/>');
+            var node = document.write();
             append_element.appendChild(node);
             transaction_count++;
             pa = total_amt;
           }
+          let menu = document.getElementById('append');
+          // create a new li node
+          let li = document.createElement('p');
+          li.textContent = 'Week ' + transaction_count + "-->  " + total_amt.toFixed(2) +" (" + single_roi.toFixed(2) + ')<br/>';
+
+          // insert a new node after the last list item
+          insertAfter(li,  menu.lastElementChild);
           // document.write('---------------------------------------------------- <br/>');
         }
     }
