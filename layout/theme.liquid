@@ -189,7 +189,7 @@
         document.write('Total Invested Amount : ' + pa +'<br/><br/><br/>');
         document.write('<div class="accordion" id="accordionExample">');
           for (var i = 1; i <= months; i++) {
-            document.write('<div class="accordion-item"></div');
+            document.write('<div class="accordion-item">');
             // document.write('<strong>'+ i + ' Month<br/>' + '----------------------------------------------------</strong>' + '<br/>');
             for (var j = 0; j < transaction; j++) {
               var single_roi = pa/100*interest;
@@ -201,6 +201,7 @@
               pa = total_amt;
             }
             // document.write('---------------------------------------------------- <br/>');
+            document.write('</div');
           }
           document.write('</div');
       }
