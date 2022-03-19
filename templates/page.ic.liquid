@@ -2,17 +2,14 @@
   <h1>Let's take a look!</h1>
   <div class="row">
     <div class="input-group mb-3">
-      <span for="name" class="col-md-12 mt-4 input-group-text" id="basic-addon1">Investing Amount: </span>
+      <span for="name" class="input-group-text" id="basic-addon1">Investing Amount: </span>
       <input id="amount" type="text" class="form-control me-5" placeholder="500000">
 
-      <span for="name" class="col-md-12 mt-4 input-group-text" id="basic-addon1">Months: </span>
+      <span for="name" class="input-group-text" id="basic-addon1">Months: </span>
       <input id="months" type="text" class="form-control me-5" placeholder="5">
 
-      <span for="name" class="col-md-12 mt-4 input-group-text" id="basic-addon1">ROI/Month: </span>
-      <input id="roi" type="text" class="form-control me-5" placeholder="5">
-
-      <span for="name" class="col-md-12 mt-4 input-group-text" id="basic-addon1">Transaction/Month: </span>
-      <input id="transaction_month" type="text" class="form-control me-5" placeholder="2">
+      <span for="name" class="input-group-text" id="basic-addon1">ROI/Month: </span>
+      <input id="roi" type="text" class="form-control me-5" placeholder="5%">
     </div>
   </div>
   <div class="col-12">
@@ -32,19 +29,19 @@
     	var amount = document.getElementById("amount").value;
       var months = document.getElementById("months").value;
       var roi = document.getElementById("roi").value;
-      var transactions_month = document.getElementById("transaction_month").value;
 
       document.getElementById("outputamount").innerText = amount;
       document.getElementById("outputmonth").innerText = months;
       document.getElementById("outputroi").innerText = roi;
-      document.getElementById("outputtransactions_month").innerText = transactions_month;
 
       var pa = parseInt(amount);
       var month = months;
       var interest = parseInt(roi);
       var transaction = 4;
       var transaction_count = 0;
+      document.insertAdjacentHTML('container', 'Total Invested Amount : ' + pa +'<br/><br/><br/>);
         for (var i = 1; i <= months; i++) {
+
           document.write('<strong>'+ i + ' Month<br/>' + '----------------------------------------------------</strong>' + '<br/>');
           for (var j = 0; j < transaction; j++) {
             var single_roi = pa/100*interest;
